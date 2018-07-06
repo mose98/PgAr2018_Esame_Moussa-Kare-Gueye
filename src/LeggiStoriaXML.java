@@ -41,7 +41,7 @@ public class LeggiStoriaXML {
 					
 				}
 				
-				case XMLStreamConstants.
+//				case XMLStreamConstants.
 				default:
 					break;
 				}

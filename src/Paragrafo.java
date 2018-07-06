@@ -31,17 +31,28 @@ public class Paragrafo {
 
 	}
 
+	public Paragrafo scriviParagrafo(int num) {
+		Paragrafo par = new Paragrafo();
+		par.scriviDescrizione();
+		int n = InputDati.leggiIntero("Quante domande vuoi inserire: ");
+		for (int j = 0; j < n; j++) {
+			par.scriviDomanda();
+			domande.add(j, domanda);
+		}
+		return par;
+
+	}
+
 	public String scriviDescrizione() {
 		descrizione = InputDati.leggiStringa(MSG_INS_DESCR);
+
 		return descrizione;
 
 	}
 
-	public ArrayList<String> scriviDomanda(int n) {
-		for (int i = 0; i < n; i++) {
-			InputDati.leggiStringa(domande.get(i));
-		}
+	public ArrayList<String> scriviDomanda() {
 
+		domanda = InputDati.leggiStringa(MSG_INS_DOMANDA);
 		return domande;
 	}
 
@@ -69,12 +80,12 @@ public class Paragrafo {
 		this.numDomande = numDomande;
 	}
 
-	public Map<Integer, String> getDomanda() {
-		return domanda;
-	}
-
-	public void setDomanda(Map<Integer, String> domanda) {
-		this.domanda = domanda;
-	}
+	// public Map<Integer, String> getDomanda() {
+	// return domande;
+	// }
+	//
+	// public void setDomanda(Map<Integer, String> domanda) {
+	// this.domanda = domanda;
+	// }
 
 }
