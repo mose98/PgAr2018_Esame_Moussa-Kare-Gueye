@@ -1,7 +1,10 @@
+import it.unibs.fp.mylib.InputDati;
 
 public class Avventura {
-	private String descirzione;
-	private int domanda;
-	
-	p
+	public static void main(String[] args) {
+		int n;
+		
+
+		
+	}
 }
