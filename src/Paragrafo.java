@@ -8,24 +8,28 @@ public class Paragrafo {
 	private int ID;
 	private String descrizione;
 	private int numDomande;
+	private ArrayList<String> domande = new ArrayList<String>();
 	private String domanda;
-	private Map<Integer, Integer> IDdomanda;
-	private ArrayList<String> listaDomande= new ArrayList<String> ();
 	private static final String MSG_INS_DESCR="Inserisci la descrizione del paragrafo ";
 	private static final String MSG_INS_DOMANDA="Inserisci la descrizione del paragrafo ";
 	
 
-	public Paragrafo(int ID, String descrizione, int numDomande) {
+	public Paragrafo(int ID, String descrizione, ArrayList<String> domande) {
 		this.ID = ID;
 		this.descrizione=descrizione;
-		this.numDomande=numDomande;
+		this.domande=domande;
 	}
 	
+	public ArrayList<String> getDomande() {
+		return domande;
+	}
+
+	public void setDomande(ArrayList<String> domande) {
+		this.domande = domande;
+	}
+
 	public Paragrafo() {
-		ID=0;
-		descrizione=null;
-		numDomande=0;
-		domanda=null;
+		
 	}
 	
 	public String scriviDescrizione() {
@@ -34,11 +38,14 @@ public class Paragrafo {
 		
 	}
 	
-	public String scriviDomanda() {
-		domanda=InputDati.leggiStringa(MSG_INS_DOMANDA);
-		return domanda;
-	}
-
+	public ArrayList<String> scriviDomanda(int n) {
+		for(int i=0;i<n;i++) {
+			InputDati.leggiStringa(domande.get(i));
+		}
+		
+		return domande;
+	}	
+	
 
 	public int getID() {
 		return ID;

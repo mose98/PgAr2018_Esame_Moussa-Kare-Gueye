@@ -26,7 +26,6 @@ public class LeggiStoriaXML {
 			while (xmlr.hasNext()) {
 				switch (xmlr.getEventType()) {
 				case XMLStreamConstants.START_ELEMENT: {
-					temp=xmlr.getLocalName();
 					
 					if(xmlr.getLocalName().equals("paragraph")) {
 					
