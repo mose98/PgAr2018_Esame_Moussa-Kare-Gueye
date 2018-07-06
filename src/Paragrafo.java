@@ -9,9 +9,10 @@ public class Paragrafo {
 	private String descrizione;
 	private int numDomande;
 	private ArrayList<String> domande = new ArrayList<String>();
+	private ArrayList<Paragrafo> paragrafo= new ArrayList<Paragrafo>();
 	private String domanda;
 	private static final String MSG_INS_DESCR = "Inserisci la descrizione del paragrafo ";
-	private static final String MSG_INS_DOMANDA = "Inserisci la descrizione del paragrafo ";
+	private static final String MSG_INS_DOMANDA = "Inserisci la domanda ";
 
 	public Paragrafo(int ID, String descrizione, ArrayList<String> domande) {
 		this.ID = ID;
@@ -31,6 +32,11 @@ public class Paragrafo {
 
 	}
 
+	/**
+	 * 
+	 * @param num
+	 * @return ritorna un oggetto paragrafo completato con la descrizione e la domanda
+	 */
 	public Paragrafo scriviParagrafo(int num) {
 		Paragrafo par = new Paragrafo();
 		par.scriviDescrizione();
@@ -39,6 +45,7 @@ public class Paragrafo {
 			par.scriviDomanda();
 			domande.add(j, domanda);
 		}
+		paragrafo.add(par);
 		return par;
 
 	}
