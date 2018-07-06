@@ -32,14 +32,16 @@ public class LeggiStoriaXML {
 						ID=Integer.valueOf(xmlr.getAttributeValue(0));
 						System.out.println(ID);
 						numeroParagrafi++;
-						
 					}
+					
 					if(xmlr.getLocalName().equals("option")) {
 						option=xmlr.getAttributeValue(0);
 						
 					}
 					
 				}
+				
+				case XMLStreamConstants.
 				default:
 					break;
 				}
